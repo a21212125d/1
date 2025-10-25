@@ -4,14 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akruti Odia Unicode Decoder</title>
+    <!-- Load Tailwind CSS via CDN for automatic styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
     <style>
-        /* MINIFIED TAILWIND CSS V3.4.1 - INLINED FOR OFFLINE USE */
-        /* Note: This block contains the entire default Tailwind CSS setup. */
-        @tailwind base;
-        @tailwind components;
-        @tailwind utilities;
-
-        /* Custom Styles (Tailwind's output is massive, so only adding crucial custom styles here) */
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f7fafc; /* Light gray background */
@@ -30,7 +26,6 @@
             line-height: 1.6;
         }
     </style>
-    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="min-h-screen flex items-center justify-center p-4">
     <div class="w-full max-w-4xl bg-white shadow-xl rounded-xl p-6 md:p-10 border border-gray-100">
@@ -45,6 +40,7 @@
         </header>
 
         <main class="space-y-6">
+            <!-- Akruti Input Area -->
             <div>
                 <label for="akrutiInput" class="block text-sm font-medium text-gray-700 mb-2">
                     Akruti/Non-Unicode Input Text (e.g., V@X] k`j kZ)
@@ -55,6 +51,7 @@
                 ></textarea>
             </div>
 
+            <!-- Decode Button -->
             <div class="flex justify-center">
                 <button id="decodeButton" onclick="decodeAkruti()"
                     class="px-8 py-3 bg-red-600 text-white font-semibold text-lg rounded-full shadow-lg hover:bg-red-700 transition duration-200 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-red-500 focus:ring-opacity-50"
@@ -63,6 +60,7 @@
                 </button>
             </div>
 
+            <!-- Unicode Output Area -->
             <div>
                 <label for="unicodeOutput" class="block text-sm font-medium text-gray-700 mb-2">
                     Odia Unicode Output Text (Standard Odia)
@@ -73,6 +71,7 @@
                 ></textarea>
             </div>
 
+            <!-- Copy Button -->
             <div class="flex justify-end pt-2">
                 <button onclick="copyOutput()"
                     class="px-5 py-2 bg-gray-200 text-gray-700 font-medium rounded-lg hover:bg-gray-300 transition duration-150 ease-in-out"
@@ -83,7 +82,7 @@
         </main>
 
         <footer class="mt-8 pt-6 border-t border-gray-200 text-center text-sm text-gray-500">
-            <p>Made By Pramit.</p>
+            <p>Static Decoder logic by JSahu.</p>
         </footer>
     </div>
 
@@ -223,4 +222,4 @@
         }
     </script>
 </body>
-  </html>
+</html>
